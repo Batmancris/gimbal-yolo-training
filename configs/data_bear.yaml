@@ -1,0 +1,6 @@
+path: ../datasets/bear_detection_scene
+train: images/train
+val: images/val
+
+names:
+  0: bear
