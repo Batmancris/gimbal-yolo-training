@@ -9,6 +9,7 @@ __pycache__/
 .venv*/
 .venv_yolo_train/
 
+# Datasets: exclude images/labels (on Baidu Netdisk), keep data.yaml
 datasets/**/images/*
 datasets/**/images/**/*
 datasets/**/labels/**/*.txt
@@ -29,14 +30,10 @@ datasets/**/*.webp
 beardata/
 calibration_rgb_uint8_nchw/
 
-runs/**
-!runs/README.md
+# Training results: TRACK (curves, metrics, weights, ONNX exports)
+# runs/ directory contains training outputs we want to preserve
+# weights/ directory may contain downloaded base models
 
-weights/**
-!weights/README.md
-
-*.pt
-*.onnx
 *.bin
 *.engine
 *.log
